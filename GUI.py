@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
+from NeuralNetwork import NeuralNetwork
 import numpy as np
 import os
 
@@ -59,6 +60,19 @@ class GUI:
             return
 
         self.label["text"] = f"Prediction: {predicted_class}"
+
+
+if __name__ == '__main__':
+    # Replace "dataset" with the path to your dataset if it's not in a directory named "dataset"
+    train_images, test_images, train_labels_one_hot, train_labels, test_labels_one_hot, test_labels, number_of_total_pixels = image_preprocessor(
+        28, 10, "dataset")
+
+    # Creating and training a neural network
+    nn = NeuralNetwork([784, 128, 64, 10], 0.001)
+    nn.train(train_images, train_labels_one_hot, 10)
+
+    # Initializing the GUI
+    gui = NeuralNetworkGUI(nn)
 
 
 
