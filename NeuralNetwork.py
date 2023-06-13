@@ -147,32 +147,32 @@ class NeuralNetwork:
         print(result)
 
 
-    def image_preprocessor(image_dimensions, number_of_unique_labels, dataset_path):
-        number_of_total_pixels = image_dimensions ** 2
+def image_preprocessor(image_dimensions, number_of_unique_labels, dataset_path):
+    number_of_total_pixels = image_dimensions ** 2
 
-        data_train = pd.read_csv(dataset_path + '\\' + 'mnist_train.csv')
-        data_test = pd.read_csv(dataset_path + '\\' + 'mnist_test.csv')
+    data_train = pd.read_csv(dataset_path + '\\' + 'mnist_train.csv')
+    data_test = pd.read_csv(dataset_path + '\\' + 'mnist_test.csv')
 
-        train_data = np.array(data_train)
-        test_data = np.array(data_test)
+    train_data = np.array(data_train)
+    test_data = np.array(data_test)
 
-        factor = 0.99 / 255
+    factor = 0.99 / 255
 
-        train_images = np.asfarray(train_data[:, 1:]) * factor + 0.01
-        test_images = np.asfarray(test_data[:, 1:]) * factor + 0.01
+    train_images = np.asfarray(train_data[:, 1:]) * factor + 0.01
+    test_images = np.asfarray(test_data[:, 1:]) * factor + 0.01
 
-        train_labels = np.asfarray(train_data[:, :1])
-        test_labels = np.asfarray(test_data[:, :1])
+    train_labels = np.asfarray(train_data[:, :1])
+    test_labels = np.asfarray(test_data[:, :1])
 
-        label_range = np.arange(number_of_unique_labels)
-        train_labels_one_hot = (label_range == train_labels).astype(float)
-        test_labels_one_hot = (label_range == test_labels).astype(float)
+    label_range = np.arange(number_of_unique_labels)
+    train_labels_one_hot = (label_range == train_labels).astype(float)
+    test_labels_one_hot = (label_range == test_labels).astype(float)
 
-        train_labels_one_hot[train_labels_one_hot == 0] = 0.01
-        train_labels_one_hot[train_labels_one_hot == 1] = 0.99
-        test_labels_one_hot[test_labels_one_hot == 0] = 0.01
-        test_labels_one_hot[test_labels_one_hot == 1] = 0.99
+    train_labels_one_hot[train_labels_one_hot == 0] = 0.01
+    train_labels_one_hot[train_labels_one_hot == 1] = 0.99
+    test_labels_one_hot[test_labels_one_hot == 0] = 0.01
+    test_labels_one_hot[test_labels_one_hot == 1] = 0.99
 
-        return train_images, test_images, train_labels_one_hot, train_labels, test_labels_one_hot, test_labels, number_of_total_pixels
+    return train_images, test_images, train_labels_one_hot, train_labels, test_labels_one_hot, test_labels, number_of_total_pixels
 
 
