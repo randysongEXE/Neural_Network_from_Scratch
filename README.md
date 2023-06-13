@@ -39,7 +39,7 @@ Disadvantages:
 - can experience "dead neurons", where some neurons become inactive
 - ReLU only functions in the positive region of the function's output
 
-As a rule of thumb, ReLU functions are usually the better choice when concerning efficiency and accuracy. However, I implemented the sigmoid function in order to learn the math behind it and better understand how it works.
+As a rule of thumb, ReLU functions are usually the better choice when concerning efficiency and accuracy. However, I implemented the sigmoid function in order to learn the math behind it and better understand how it works. It is important to note that activation functions aren't always a black and white choice - oftentimes, they are most effective when used in a combination of each other.
 
 Dataset and Image Preprocessing
 -------------------
