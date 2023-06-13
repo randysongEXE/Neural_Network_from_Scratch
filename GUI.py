@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
-from NeuralNetwork import NeuralNetwork
+from NeuralNetwork import image_preprocessor
 import numpy as np
 import os
 
 
-class GUI:
+class NeuralNetworkGUI:
 
     def __init__(self, neural_network):
         self.nn = neural_network
