@@ -39,6 +39,29 @@ Disadvantages:
 - can experience "dead neurons", where some neurons become inactive
 - ReLU only functions in the positive region of the function's output
 
-As a rule of thumb, ReLU functions are usually the better choice when concerning efficiency and accuracy. However, I implemented the sigmoid function in order to learn the math behind it and understand how it works.
+As a rule of thumb, ReLU functions are usually the better choice when concerning efficiency and accuracy. However, I implemented the sigmoid function in order to learn the math behind it and better understand how it works.
+
+Dataset and Image Preprocessing
+-------------------
+In the NeuralNetwork.py class, the image_preprocessor function analyzes the MNIST dataset. For context, the MNIST dataset is a large collection of handwritten digits, which is often used for testing and training networks such as this. To run this code, you will need to have the proper dataset downloaded. It is also important to ensure that the essential data files are within the same directory as the other classes. Here is the link for the MNIST dataset:
+http://yann.lecun.com/exdb/mnist/
+If that doesn't work, than try the alternate link below:
+https://pjreddie.com/projects/mnist-in-csv/
+
+Prerequisites
+------------
+To run this code, please ensure that you have the proper libraries downloaded. You can do so using the following commands in the terminal:
+pip install python
+pip install numpy
+pip install pandas
+pip install matplotlib
+
+As a side note, verify that the MNSIT data is within a .csv file. If not, you must modify the code to read a different data marker.
+
+Results
+--------
+This neural network was able to achieve a max accuracy rate of 95.07 %.
+
+
 
 
