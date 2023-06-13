@@ -18,13 +18,27 @@ Generally, all neural networks contain some variation of these implementations:
 Activation Function
 ----------
 In general, there are two common types of activation functions: Sigmoid and ReLU. The sigmoid function is defined as f(x) = 1 / (1 + exp(-x)). It's an S-shaped curve that maps the input values into the range between 0 and 1. On the other hand, it is differentiable, which means we can find the slope of the sigmoid curve at any two points. However, it is important to note that there are some pros and cons to implementing the sigmoid function.
-Pros:
+
+Advantages:
 - it is non-linear in nature, including combinations of itself
 - retains a smooth gradient
 - provides an analog activation
 
-Cons:
+Disadvantages:
 - For extreme values of X, there is negligable change to the prediction, leading to the vanishing gradient problem
 - computationally expensive and generally requires larger memory
+
+
+The other most common activation function is known the the Rectified Linear Unit (ReLU). This is defined as  f(x) = max(0, x), meaning that the function returns x if it is greater than 0, and returns 0 otherwise. The ReLU also has its pros and cons in comparison to the sigmoid activation function.
+
+Advantages:
+- ReLU is able to avoid the vanishing gradient problem
+- computationally efficient since it can threshold a matrix of activations at 0
+
+Disadvantages:
+- can experience "dead neurons", where some neurons become inactive
+- ReLU only functions in the positive region of the function's output
+
+As a rule of thumb, ReLU functions are usually the better choice when concerning efficiency and accuracy. However, I implemented the sigmoid function in order to learn the math behind it and understand how it works.
 
 
