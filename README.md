@@ -60,7 +60,7 @@ As a side note, verify that the MNSIT data is within a .csv file. If not, you mu
 
 Results
 --------
-This neural network was able to achieve a max accuracy rate of 95.07 %.
+This neural network was able to achieve a max accuracy result of 95.07%.
 
 
 
