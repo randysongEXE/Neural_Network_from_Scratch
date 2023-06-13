@@ -1,6 +1,6 @@
 # Neural_Network_from_Scratch
 
-This project was created to explore how a neural network works, including its various components, layers, and functions. This neural network was written from scratch, and does not utilize the machine learning framworks Tensorflow or Pytorch. Instead, the libraries Numpy, Pandas, and Random were imported for matrices, data manipulation, and number generation support.
+This project was created to explore how a neural network works, including its various components, layers, and functions. This neural network was written from scratch, and does not utilize the machine learning framworks Tensorflow or Pytorch. Instead, the libraries Numpy, Pandas, and Random were imported for matrices, data manipulation, and number generation support. Please note that the actual neural network can be found within the "NeuralNetwork.py" class, while the Graphical User Interface (GUI) has been implemented within the "GUI.py" class.
 
 Overview
 ---------
