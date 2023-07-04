@@ -51,12 +51,13 @@ https://pjreddie.com/projects/mnist-in-csv/
 Prerequisites
 ------------
 To run this code, please ensure that you have the proper libraries downloaded. You can do so using the following commands in the terminal:
-pip install python
-pip install numpy
-pip install pandas
-pip install matplotlib
 
-As a side note, verify that the MNSIT data is within a .csv file. If not, you must modify the code to read a different data marker.
+- pip install python
+- pip install numpy
+- pip install pandas
+- pip install matplotlib
+
+As a side note, please verify that the MNSIT data is within a .csv file. If not, you must modify the code to read a different data marker.
 
 Results
 --------
